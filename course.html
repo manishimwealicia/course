@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Course Registration Form</h2>
+  <form action="/submit_registration" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="studentId">Student ID:</label>
+    <input type="text" id="studentId" name="studentId" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course" required>
+      <option value="">--Select a Course--</option>
+      <option value="math101">Math 101</option>
+      <option value="eng202">English 202</option>
+      <option value="cs303">Computer Science 303</option>
+      <option value="hist404">History 404</option>
+    </select>
+
+    <label for="comments">Additional Comments (optional):</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <button type="submit">Register</button>
+  </form>
+
+</body>
+</html>
